@@ -9,11 +9,13 @@ import java.util.Random;
 */
 public class TorpedoStore {
 
-  Random generator = new Random();
+  // make Random private and reusable
+  private Random generator = new Random();
 
   // rate of failing to fire torpedos [0.0, 1.0]
   private double FAILURE_RATE = 0.0; //NOSONAR
 
+  // count torpedo amount
   private int torpedoCount = 0;
 
   public TorpedoStore(int numberOfTorpedos){
